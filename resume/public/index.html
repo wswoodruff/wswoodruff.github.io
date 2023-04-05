@@ -1,528 +1,501 @@
 <!doctype html>
-<html>
-	<head>
-	
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-	
-	<title>William Woodruff</title>
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-	
-	<style type="text/css">
-	@import url(
-	https://fonts.googleapis.com/css?family=Lato:400,700
-);
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>William Woodruff</title>
+    <meta name="description" content="William Woodruff aka Bill or Zill, is a full stack JS and XR engineer with a JSNSD (JS Node Services Developer) cert from the Linux Foundation. Bill prefers using hapipal and hapi on the back-end, and react or react-native on the front-end, but has experience with a variety of tech stacks. Most recently for work projects Bill has been implementing an awesome XR UI at, ex: https://app.alakazam.io/yjnqZq5/vibes! He lead the implementation work on the lobby and in-room UI at Alakazam! Outside of work he&#x27;s been having lots of fun working on his new chatbot, Chappy! Say hello at https://chappyai.com! Also checkout my personal ShaderFes over at https://zillslab.com!" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
+    <style>:root {
+  /* Colors */
+  --primaryColor: #212529;
+  --secondaryColor: #95a5a6;
+  --accentColor: #f1c40f;
+  --linkColor: #2ecc71;
+  --mutedColor: #f4f6f6;
+
+  /* Typography */
+  --ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--ratio));
+  --scale2: calc(var(--scale1) * var(--ratio));
+  --scale3: calc(var(--scale2) * var(--ratio));
+  --scale4: calc(var(--scale3) * var(--ratio));
+  --scale5: calc(var(--scale4) * var(--ratio));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
 body {
-	background: #fff;
-	font-family: Lato, sans-serif;
-	margin: 0 0 80px;
+  color: var(--primaryColor);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
 }
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.2em;
+}
+
+li::marker {
+  color: var(--mutedColor);
+}
+
 a {
-	color: #2ecc71;
+  color: var(--linkColor);
+  text-decoration: none;
+  transition: color 0.2s;
 }
+
 a:focus,
 a:hover {
-	color: #f1c40f;
-	text-decoration: none;
+  color: var(--accentColor);
 }
-p {
-	line-height: 1.5;
-	margin: 0;
-}
-p + p {
-	margin-top: 10px;
-}
+
 h1,
 h2,
 h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--secondaryColor);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--accentColor);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
 h4 {
-	margin-top: 0
+  font-size: var(--scale2);
 }
-section {
-	margin-top: 30px;
+
+h5 {
+  font-size: var(--scale1);
 }
-li {
-	line-height: 1.8;
-	list-style: none;
+
+h6 {
+  font-size: var(--scale0);
 }
-li:before {
-	content: "\f052";
-	float: left;
-	font: 13px Octicons;
-	margin-top: 6px;
-	margin-left: -20px;
-	opacity: .1;
-	position: absolute;
-}
+
 blockquote {
-	border-left: 5px solid #e7e9ec;
-	font-size: 14px;
-}
-em {
-	color: #95a5a6;
-	font-weight: normal;
-	font-style: normal;
-}
-h4 span:first-child {
-	color: #000;
-	font-weight: bold;
-}
-.container {
-	max-width: 750px;
-	padding: 0 30px;
-}
-.col-sm-6 {
-	margin-bottom: 10px;
-}
-.col-sm-12 h4 {
-	margin-top: 12px; 
-}
-.col-sm-12 + .col-sm-12 {
-	margin-top: 30px;
-}
-#header {
-	background: #f4f6f6;
-	padding: 50px 0;
-	margin-bottom: 30px;
-}
-#header h2 {
-	color: #95a5a6;
-	font-size: 24px;
-}
-#content h3 {
-	color: #f1c40f;
-	font-size: 26px;
-	margin-top: -4px;
-}
-#content aside {
-	text-align: right;
-	padding-right: 30px;
-}
-#profiles .network {
-	text-transform: capitalize;
-}
-#work .position,
-#volunteer .position {
-	font-weight: bold;
-	margin-bottom: 8px;
-}
-#education .area {
-	font-weight: bold;
-}
-#education .area:before {
-	content: "\f0d7";
-	font: 16px Octicons;
-	margin-right: 6px;
-}
-#education .studyType {
-	margin-left: 25px;
-}
-#awards .summary,
-#publications .summary {
-	margin-top: 8px;
-}
-#publications .website a:before {
-	content: attr(href);
+  border-left: 0.2em solid var(--mutedColor);
+  padding-left: 1em;
 }
 
-@media (min-width: 480px) {
-	.strike-through {
-		border-top: 1px solid #f4f6f6;
-		height: 20px;
-		margin-top: 12px;
-		margin-bottom: -2px;
-		position: relative;
-	}
-	.strike-through span,
-	.strike-through a {
-		background: #fff;
-		position: absolute;
-	}
-	.strike-through span:first-child {
-		padding-right: 20px;
-		margin-top: -12px;
-	}
-	.strike-through span + span {
-		font-size: 14px;
-		margin-top: -10px;
-		padding-left: 20px;
-		right: 0;
-	}
-}
-@media (max-width: 768px) {
-	.col-sm-6:last-child {
-		margin-bottom: 0px;
-	}
-	#content aside {
-		margin-bottom: 20px;
-		padding-right: 0;
-		text-align: left;
-	}
-	#publications .website a:before {
-		content: "View publication";
-	}
-}
-@media (max-width: 480px) {
-	h1 {
-		font-size: 26px;
-	}
-	.date {
-		font-size: 14px;
-		margin-bottom: 5px;
-	}
-	.strike-through span:first-child {
-		margin-bottom: 7px;
-	}
-	.strike-through span {
-		display: block;
-	}	
-	#header {
-		margin-bottom: 10px;
-		padding: 40px 0;
-	}
-	#actions {
-		display: none;
-	}
+cite {
+  color: var(--secondaryColor);
+  font-style: inherit;
 }
 
-	</style>
-	
-	</head>
-	<body>
-	
-	<header id="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-9 col-sm-push-3">
-					<h1>
-						William Woodruff
-					</h1>
-					<h2>
-						Full Stack JS and XR Engineer
-					</h2>
-				</div>
-			</div>
-		</div>
-	</header>
-	<div id="content" class="container">
+cite::before {
+  content: '— ';
+}
 
-	<section id="contact" class="row">
-		<aside class="col-sm-3">
-			<h3>Contact</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<strong>Email</strong>
-				<div class="email">williamswoodruff@gmail.com</div>
-			</div>
-			<div class="col-sm-6">
-				<strong>Phone</strong>
-				<div class="phone">(314) 266-8207</div>
-			</div>
-			</div>
-		</div>
-	</section>
-	<section id="about" class="row">
-		<aside class="col-sm-3">
-			<h3>About</h3>
-		</aside>
-		<div class="col-sm-9">
-			<p>William Woodruff aka Bill or Zill, is a full stack JS and XR engineer with a JSNSD (JS Node Services Developer) cert from the Linux Foundation. Bill prefers using hapipal and hapi on the back-end, and react or react-native on the front-end, but has experience with a variety of tech stacks. Most recently for work projects Bill has been implementing an awesome XR UI at, ex: https://app.alakazam.io/yjnqZq5/vibes! He lead the implementation work on the lobby and in-room UI at Alakazam! Outside of work he&#x27;s been having lots of fun working on his new chatbot, Chappy! Say hello at https://chappyai.com! Also checkout my personal ShaderFes over at https://zillslab.com!</p>
-		</div>
-	</section>
-	<section id="profiles" class="row">
-		<aside class="col-sm-3">
-			<h3>Profiles</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-				<div class="col-sm-6">
-					<strong class="network">
-						Twitter
-					</strong>
-					<div class="username">
-						<div class="url">
-							<a href="https://twitter.com/wswoodruff_">wswoodruff_</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<strong class="network">
-						Github
-					</strong>
-					<div class="username">
-						<div class="url">
-							<a href="https://github.com/wswoodruff">wswoodruff</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<strong class="network">
-						Metaverse
-					</strong>
-					<div class="username">
-						<div class="url">
-							<a href="https://zillslab.com">Zill</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<strong class="network">
-						AI
-					</strong>
-					<div class="username">
-						<div class="url">
-							<a href="https://chappyai.com">Chappy</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+.masthead {
+  background: var(--mutedColor);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  row-gap: 0;
+}
 
-	<section id="work" class="row">
-		<aside class="col-sm-3">
-			<h3>Work</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span></span>
-					<span class="date">
-						2022-01 — 
-					</span>
-				</h4>
-				<div class="position">
-					Senior XR Engineer
-				</div>
-				<div class="summary">
-					<p>XR company Alakazam brings affordable self-service metaverse management services to subscription holders!</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Successfully lead the effort for implementing the main Lobby UI, and in-room UI. Checkout the slidy blue background when you hover it&#x27;s fun! Ex: https://app.alakazam.io/yjnqZq5/vibes.</li>
-					<li class="bullet">Worked on Mozilla hubs front-end and the accompanying Elixir back-end to develop full-stack features.</li>
-					<li class="bullet">Invented a room state system that self-manages room state including cleanup!</li>
-					<li class="bullet">Provided a big fun list of default Avatars (build w/ Ready Player Me) for Alakazam to offer!</li>
-					<li class="bullet">Worked on ideas and POCs for how to add games and make interactible experiences to hubs.</li>
-					<li class="bullet">Participated in the hubs community and helped host the community meetup.</li>
-					<li class="bullet">Identified key areas the company could focus effort on providing back to the OSS community.</li>
-					<li class="bullet">Contributions to CI/CD setup</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span></span>
-					<span class="date">
-						2015-08 — 2022-02
-					</span>
-				</h4>
-				<div class="position">
-					Full Stack Developer
-				</div>
-				<div class="summary">
-					<p>Designing and building software solutions with love in Portland, Maine since 2002.</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">AWS / Cloud experience via managing hosting for several enterprise-level production applications</li>
-					<li class="bullet">Client Facing — clients seem to like working with me and nobody can figure out why</li>
-					<li class="bullet">Develop Web Apps w/ React and Redux</li>
-					<li class="bullet">Develop React Native Apps</li>
-					<li class="bullet">Create APIs with Node, hapipal, hapi, and friends</li>
-					<li class="bullet">Some maintenance work on &#x60;hapipal&#x60; modules (https://hapipal.com)</li>
-					<li class="bullet">Contribute to various other bigroom open source projects including (https://github.com/bigroomstudios/strangeluv)</li>
-				</ul>
-			</div>
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span></span>
-					<span class="date">
-						2014-10 — 
-					</span>
-				</h4>
-				<div class="position">
-					Full Stack Developer
-				</div>
-				<div class="summary">
-					<p>Full Stack web-app, react-native, and XR Development</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Enterprise-level web-app and react-native app development</li>
-					<li class="bullet">Fun projects like Chappy (https://chappyai.com) sometimes!</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
+.masthead > *,
+section {
+  grid-column: main;
+}
 
-	<section id="volunteer" class="row">
-		<aside class="col-sm-3">
-			<h3>Volunteer</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-12">
-				<h4 class="strike-through">
-					<span>CYWOC</span>
-					<span class="date">
-						2021-01-01 — 2022-12
-					</span>
-				</h4>
-				<div class="position">
-					Development Contributions
-				</div>
-				<div class="summary">
-					<p>Tech Education non-profit with focus to bring VR and top emerging tech to the women of color community via funded education, with community reachout achieved through engaging events!</p>
-				</div>
-				<h4>Highlights</h4>
-				<ul class="highlights">
-					<li class="bullet">Part of 2022 Tribeca Film Festival&#x27;s Juneteenth event https://tribecafilm.com/juneteenth</li>
-					<li class="bullet">2022 Tribeca Film Festival film page https://tribecafilm.com/films/exhibition-a-2022</li>
-					<li class="bullet">Participated in development of the website and for a short time, work community leadership</li>
-					<li class="bullet">Helped facilitate Tribeca interactive VR show by supporting performance artists who lead users through the experience in VR as a fun avatar, at designated showtimes!</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
-	
-	
-	
-	
-	<section id="skills" class="row">
-		<aside class="col-sm-3">
-			<h3>Skills</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Web front-end development</h4>
-				</div>
-				<ul class="keywords">
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>Javascript</li>
-					<li>React</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Web back-end development</h4>
-				</div>
-				<ul class="keywords">
-					<li>Node</li>
-					<li>hapipal</li>
-					<li>hapi</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>XR development</h4>
-				</div>
-				<ul class="keywords">
-					<li>Mozilla hubs</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Tech Art</h4>
-				</div>
-				<ul class="keywords">
-					<li>Shaders</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>AI personality development</h4>
-				</div>
-				<ul class="keywords">
-					<li>AI</li>
-					<li>AI personality building</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
 
-	<section id="languages" class="row">
-		<aside class="col-sm-3">
-			<h3>Languages</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<div class="language">
-					<strong>English</strong>
-				</div>
-				<div class="fluency">
-					Native speaker
-				</div>
-			</div>
-			</div>
-		</div>
-	</section>
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
 
-	<section id="interests" class="row">
-		<aside class="col-sm-3">
-			<h3>Interests</h3>
-		</aside>
-		<div class="col-sm-9">
-			<div class="row">
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Programming</h4>
-				</div>
-				<ul class="keywords">
-					<li>Creative Development</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Video Games</h4>
-				</div>
-				<ul class="keywords">
-					<li>Destiny 2</li>
-					<li>Halo</li>
-					<li>COD</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Snowboarding</h4>
-				</div>
-				<ul class="keywords">
-					<li>Snowboarding</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Chillin</h4>
-				</div>
-				<ul class="keywords">
-					<li>Chillin</li>
-				</ul>
-			</div>
-			<div class="col-sm-6">
-				<div class="name">
-					<h4>Jokes</h4>
-				</div>
-				<ul class="keywords">
-					<li>I got &#x27;em</li>
-				</ul>
-			</div>
-			</div>
-		</div>
-	</section>
-	
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
 
-	</div>
-	
-	</body>
+.spaced-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-list:first-child::before {
+  border-bottom: 1px solid var(--mutedColor);
+  content: '';
+  flex-grow: 1;
+  margin: 0 1em;
+  order: 1;
+}
+
+.spaced-list > :nth-child(2) {
+  order: 2;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--mutedColor);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <h1>William Woodruff</h1>
+          <h2>Full Stack JS and XR Engineer</h2>
+      </header>
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="grid-list">
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:williamswoodruff@gmail.com">williamswoodruff@gmail.com</a>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              (314) 266-8207
+            </div>
+            <div>
+              <h4>Website</h4>
+              <a href="https://zillslab.com">zillslab.com</a>
+            </div>
+        </div>
+      </section>
+        <section id="about">
+          <h3>About</h3>
+          <article>
+            <p>William Woodruff aka Bill or Zill, is a full stack JS and XR engineer with a JSNSD (JS Node Services Developer) cert from the Linux Foundation. Bill prefers using hapipal and hapi on the back-end, and react or react-native on the front-end, but has experience with a variety of tech stacks. Most recently for work projects Bill has been implementing an awesome XR UI at, ex: https://app.alakazam.io/yjnqZq5/vibes! He lead the implementation work on the lobby and in-room UI at Alakazam! Outside of work he's been having lots of fun working on his new chatbot, Chappy! Say hello at https://chappyai.com! Also checkout my personal ShaderFes over at https://zillslab.com!</p>
+          </article>
+        </section>
+        <section id="profiles">
+          <h3>Profiles</h3>
+          <div class="grid-list">
+              <div>
+                  <h4>Twitter</h4>
+                    <a href="https://twitter.com/wswoodruff_">wswoodruff_</a>
+              </div>
+              <div>
+                  <h4>Github</h4>
+                    <a href="https://github.com/wswoodruff">wswoodruff</a>
+              </div>
+              <div>
+                  <h4>Metaverse</h4>
+                    <a href="https://zillslab.com">Zill</a>
+              </div>
+              <div>
+                  <h4>AI</h4>
+                    <a href="https://chappyai.com">Chappy</a>
+              </div>
+          </div>
+        </section>
+
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Alakazam</h4>
+                  <span>
+                    <time datetime="2022-01">Jan 2022</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Senior XR Engineer</strong>
+                    <a href="https://alakazam.io">alakazam.io</a>
+                </div>
+              </header>
+                <p>XR company Alakazam brings affordable self-service metaverse management services to subscription holders!</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Successfully lead the effort for implementing the main Lobby UI, and in-room UI. Checkout the slidy blue background when you hover it&#x27;s fun! Ex: https://app.alakazam.io/yjnqZq5/vibes.</li>
+                    <li>Worked on Mozilla hubs front-end and the accompanying Elixir back-end to develop full-stack features.</li>
+                    <li>Invented a room state system that self-manages room state including cleanup!</li>
+                    <li>Provided a big fun list of default Avatars (build w/ Ready Player Me) for Alakazam to offer!</li>
+                    <li>Worked on ideas and POCs for how to add games and make interactible experiences to hubs.</li>
+                    <li>Participated in the hubs community and helped host the community meetup.</li>
+                    <li>Identified key areas the company could focus effort on providing back to the OSS community.</li>
+                    <li>Contributions to CI/CD setup</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Big Room Studios</h4>
+                  <span>
+                    <time datetime="2015-08">Aug 2015</time> –
+                    <time datetime="2022-02">Feb 2022</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Full Stack Developer</strong>
+                    <a href="https://bigroomstudios.com">bigroomstudios.com</a>
+                </div>
+              </header>
+                <p>Designing and building software solutions with love in Portland, Maine since 2002.</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>AWS / Cloud experience via managing hosting for several enterprise-level production applications</li>
+                    <li>Client Facing — clients seem to like working with me and nobody can figure out why</li>
+                    <li>Develop Web Apps w/ React and Redux</li>
+                    <li>Develop React Native Apps</li>
+                    <li>Create APIs with Node, hapipal, hapi, and friends</li>
+                    <li>Some maintenance work on &#x60;hapipal&#x60; modules (https://hapipal.com)</li>
+                    <li>Contribute to various other bigroom open source projects including (https://github.com/bigroomstudios/strangeluv)</li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>XD Creative</h4>
+                  <span>
+                    <time datetime="2014-10">Oct 2014</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Full Stack Developer</strong>
+                    <a href="https://xdcreative.io">xdcreative.io</a>
+                </div>
+              </header>
+                <p>Full Stack web-app, react-native, and XR Development</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Enterprise-level web-app and react-native app development</li>
+                    <li>Fun projects like Chappy (https://chappyai.com) sometimes!</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="volunteer">
+        <h3>Volunteer</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>CYWOC</h4>
+                  <span>
+                    <time datetime="2021-01-01">Jan 2021</time> –
+                    <time datetime="2022-12">Dec 2022</time>
+                  </span>
+                </div>
+                <div class="spaced-list">
+                    <strong>Development Contributions</strong>
+                    <a href="https://cywoc.org">cywoc.org</a>
+                </div>
+              </header>
+                <p>Tech Education non-profit with focus to bring VR and top emerging tech to the women of color community via funded education, with community reachout achieved through engaging events!</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Part of 2022 Tribeca Film Festival&#x27;s Juneteenth event https://tribecafilm.com/juneteenth</li>
+                    <li>2022 Tribeca Film Festival film page https://tribecafilm.com/films/exhibition-a-2022</li>
+                    <li>Participated in development of the website and for a short time, work community leadership</li>
+                    <li>Helped facilitate Tribeca interactive VR show by supporting performance artists who lead users through the experience in VR as a fun avatar, at designated showtimes!</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <div class="spaced-list">
+                  <h4>Chappy</h4>
+                  <span>
+                    <time datetime="2023-03-25">Mar 2023</time> –
+                    Present
+                  </span>
+                </div>
+                <div class="spaced-list">
+                  <span>
+                      <strong>AI personality development, API integration for openai, replicate, All back-end development, All front-end development, except the googly eyes which were done by Trippy!</strong>
+                      at <strong>XD Creative</strong>
+                  </span>
+                    <a href="https://chappyai.com">chappyai.com</a>
+                </div>
+              </header>
+                <p>A FUN, friendly neighborhood chatbot!</p>
+                <h5>Highlights</h5>
+                <ul>
+                    <li>Built in a week but an hours-heavy one at that</li>
+                    <li>Implements openai API</li>
+                    <li>Implements replicate.com API</li>
+                    <li>Built on hapipal</li>
+                    <li>Chappy picked the gradient anims &#x3D;P!</li>
+                    <li>Eyes following the mouse built by TripDragon! Thanks Trippy!</li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Web front-end development</h4>
+                <ul class="tag-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Web back-end development</h4>
+                <ul class="tag-list">
+                    <li>Node</li>
+                    <li>hapipal</li>
+                    <li>hapi</li>
+                </ul>
+            </div>
+            <div>
+                <h4>XR development</h4>
+                <ul class="tag-list">
+                    <li>Mozilla hubs</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Tech Art</h4>
+                <ul class="tag-list">
+                    <li>Shaders</li>
+                </ul>
+            </div>
+            <div>
+                <h4>AI personality development</h4>
+                <ul class="tag-list">
+                    <li>AI</li>
+                    <li>AI personality building</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>English</h4>
+              Native speaker
+            </div>
+        </div>
+      </section>
+      <section id="interests">
+        <h3>Interests</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Programming</h4>
+                <ul class="tag-list">
+                    <li>Creative Development</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Video Games</h4>
+                <ul class="tag-list">
+                    <li>Destiny 2</li>
+                    <li>Halo</li>
+                    <li>COD</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Snowboarding</h4>
+                <ul class="tag-list">
+                    <li>Snowboarding</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Chillin</h4>
+                <ul class="tag-list">
+                    <li>Chillin</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Jokes</h4>
+                <ul class="tag-list">
+                    <li>I got &#x27;em</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+  </body>
 </html>
