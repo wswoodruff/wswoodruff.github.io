@@ -1,0 +1,508 @@
+<!doctype html>
+<html>
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
+	<title>William Woodruff</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+	
+	<style type="text/css">
+	@import url(
+	https://fonts.googleapis.com/css?family=Lato:400,700
+);
+body {
+	background: #fff;
+	font-family: Lato, sans-serif;
+	margin: 0 0 80px;
+}
+a {
+	color: #2ecc71;
+}
+a:focus,
+a:hover {
+	color: #f1c40f;
+	text-decoration: none;
+}
+p {
+	line-height: 1.5;
+	margin: 0;
+}
+p + p {
+	margin-top: 10px;
+}
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0
+}
+section {
+	margin-top: 30px;
+}
+li {
+	line-height: 1.8;
+	list-style: none;
+}
+li:before {
+	content: "\f052";
+	float: left;
+	font: 13px Octicons;
+	margin-top: 6px;
+	margin-left: -20px;
+	opacity: .1;
+	position: absolute;
+}
+blockquote {
+	border-left: 5px solid #e7e9ec;
+	font-size: 14px;
+}
+em {
+	color: #95a5a6;
+	font-weight: normal;
+	font-style: normal;
+}
+h4 span:first-child {
+	color: #000;
+	font-weight: bold;
+}
+.container {
+	max-width: 750px;
+	padding: 0 30px;
+}
+.col-sm-6 {
+	margin-bottom: 10px;
+}
+.col-sm-12 h4 {
+	margin-top: 12px; 
+}
+.col-sm-12 + .col-sm-12 {
+	margin-top: 30px;
+}
+#header {
+	background: #f4f6f6;
+	padding: 50px 0;
+	margin-bottom: 30px;
+}
+#header h2 {
+	color: #95a5a6;
+	font-size: 24px;
+}
+#content h3 {
+	color: #f1c40f;
+	font-size: 26px;
+	margin-top: -4px;
+}
+#content aside {
+	text-align: right;
+	padding-right: 30px;
+}
+#profiles .network {
+	text-transform: capitalize;
+}
+#work .position,
+#volunteer .position {
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+#education .area {
+	font-weight: bold;
+}
+#education .area:before {
+	content: "\f0d7";
+	font: 16px Octicons;
+	margin-right: 6px;
+}
+#education .studyType {
+	margin-left: 25px;
+}
+#awards .summary,
+#publications .summary {
+	margin-top: 8px;
+}
+#publications .website a:before {
+	content: attr(href);
+}
+
+@media (min-width: 480px) {
+	.strike-through {
+		border-top: 1px solid #f4f6f6;
+		height: 20px;
+		margin-top: 12px;
+		margin-bottom: -2px;
+		position: relative;
+	}
+	.strike-through span,
+	.strike-through a {
+		background: #fff;
+		position: absolute;
+	}
+	.strike-through span:first-child {
+		padding-right: 20px;
+		margin-top: -12px;
+	}
+	.strike-through span + span {
+		font-size: 14px;
+		margin-top: -10px;
+		padding-left: 20px;
+		right: 0;
+	}
+}
+@media (max-width: 768px) {
+	.col-sm-6:last-child {
+		margin-bottom: 0px;
+	}
+	#content aside {
+		margin-bottom: 20px;
+		padding-right: 0;
+		text-align: left;
+	}
+	#publications .website a:before {
+		content: "View publication";
+	}
+}
+@media (max-width: 480px) {
+	h1 {
+		font-size: 26px;
+	}
+	.date {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	.strike-through span:first-child {
+		margin-bottom: 7px;
+	}
+	.strike-through span {
+		display: block;
+	}	
+	#header {
+		margin-bottom: 10px;
+		padding: 40px 0;
+	}
+	#actions {
+		display: none;
+	}
+}
+
+	</style>
+	
+	</head>
+	<body>
+	
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9 col-sm-push-3">
+					<h1>
+						William Woodruff
+					</h1>
+					<h2>
+						Full Stack JS and XR Engineer
+					</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="content" class="container">
+
+	<section id="contact" class="row">
+		<aside class="col-sm-3">
+			<h3>Contact</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<strong>Email</strong>
+				<div class="email">williamswoodruff@gmail.com</div>
+			</div>
+			<div class="col-sm-6">
+				<strong>Phone</strong>
+				<div class="phone">(314) 266-8207</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section id="about" class="row">
+		<aside class="col-sm-3">
+			<h3>About</h3>
+		</aside>
+		<div class="col-sm-9">
+			<p>William Woodruff aka Bill or Zill, is a full stack JS and XR engineer with a JSNSD (JS Node Services Developer) cert from the Linux Foundation. Bill prefers using hapipal and hapi on the back-end, and react or react-native on the front-end, but has experience with a variety of tech stacks. Most recently for work projects Bill has been implementing an awesome XR UI at, ex: https://app.alakazam.io/yjnqZq5/vibes! He lead the implementation work on the lobby and in-room UI at Alakazam! Outside of work he&#x27;s been having lots of fun working on his new chatbot, Chappy! Say hello at https://chappyai.com!</p>
+		</div>
+	</section>
+	<section id="profiles" class="row">
+		<aside class="col-sm-3">
+			<h3>Profiles</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+				<div class="col-sm-6">
+					<strong class="network">
+						Twitter
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="https://twitter.com/wswoodruff_">wswoodruff_</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<strong class="network">
+						Github
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="https://github.com/wswoodruff">wswoodruff</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="work" class="row">
+		<aside class="col-sm-3">
+			<h3>Work</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span></span>
+					<span class="date">
+						2022-01 — 
+					</span>
+				</h4>
+				<div class="position">
+					Senior XR Engineer
+				</div>
+				<div class="summary">
+					<p>XR company Alakazam brings affordable self-service metaverse management services to subscription holders!</p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Successfully lead the effort for implementing the main Lobby UI, and in-room UI. Checkout the slidy blue background when you hover it&#x27;s fun! Ex: https://app.alakazam.io/yjnqZq5/vibes.</li>
+					<li class="bullet">Worked on Mozilla hubs front-end and the accompanying Elixir back-end to develop full-stack features.</li>
+					<li class="bullet">Invented a room state system that self-manages room state including cleanup!</li>
+					<li class="bullet">Provided a big fun list of default Avatars (build w/ Ready Player Me) for Alakazam to offer!</li>
+					<li class="bullet">Worked on ideas and POCs for how to add games and make interactible experiences to hubs.</li>
+					<li class="bullet">Participated in the hubs community and helped host the community meetup.</li>
+					<li class="bullet">Identified key areas the company could focus effort on providing back to the OSS community.</li>
+					<li class="bullet">Contributions to CI/CD setup</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span></span>
+					<span class="date">
+						2015-08 — 2022-02
+					</span>
+				</h4>
+				<div class="position">
+					Full Stack Developer
+				</div>
+				<div class="summary">
+					<p>Designing and building software solutions with love in Portland, Maine since 2002.</p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">AWS / Cloud experience via managing hosting for several enterprise-level production applications</li>
+					<li class="bullet">Client Facing — clients seem to like working with me and nobody can figure out why</li>
+					<li class="bullet">Develop Web Apps w/ React and Redux</li>
+					<li class="bullet">Develop React Native Apps</li>
+					<li class="bullet">Create APIs with Node, hapipal, hapi, and friends</li>
+					<li class="bullet">Some maintenance work on &#x60;hapipal&#x60; modules (https://hapipal.com)</li>
+					<li class="bullet">Contribute to various other bigroom open source projects including (https://github.com/bigroomstudios/strangeluv)</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span></span>
+					<span class="date">
+						2014-10 — 
+					</span>
+				</h4>
+				<div class="position">
+					Full Stack Developer
+				</div>
+				<div class="summary">
+					<p>Full Stack web-app, react-native, and XR Development</p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Enterprise-level web-app and react-native app development</li>
+					<li class="bullet">Fun projects like Chappy sometimes!</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="volunteer" class="row">
+		<aside class="col-sm-3">
+			<h3>Volunteer</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>CYWOC</span>
+					<span class="date">
+						2021-01-01 — 
+					</span>
+				</h4>
+				<div class="position">
+					Development Contributions
+				</div>
+				<div class="summary">
+					<p>Tech Education non-profit with focus to bring VR and top emerging tech to the women of color community via funded education, with community reachout achieved through engaging events!</p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Part of 2022 Tribeca Film Festival&#x27;s Juneteenth event https://tribecafilm.com/juneteenth</li>
+					<li class="bullet">2022 Tribeca Film Festival film page https://tribecafilm.com/films/exhibition-a-2022</li>
+					<li class="bullet">Participated in development of the website and for a short time, work community leadership</li>
+					<li class="bullet">Helped facilitate Tribeca interactive VR show by supporting performance artists who lead users through the experience in VR as a fun avatar, at designated showtimes!</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	
+	
+	<section id="skills" class="row">
+		<aside class="col-sm-3">
+			<h3>Skills</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Web front-end development</h4>
+				</div>
+				<ul class="keywords">
+					<li>HTML</li>
+					<li>CSS</li>
+					<li>Javascript</li>
+					<li>React</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Web back-end development</h4>
+				</div>
+				<ul class="keywords">
+					<li>Node</li>
+					<li>hapipal</li>
+					<li>hapi</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>XR development</h4>
+				</div>
+				<ul class="keywords">
+					<li>mozilla hubs</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Tech Art</h4>
+				</div>
+				<ul class="keywords">
+					<li>shaders</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>AI personality development</h4>
+				</div>
+				<ul class="keywords">
+					<li>AI</li>
+					<li>AI personality</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="languages" class="row">
+		<aside class="col-sm-3">
+			<h3>Languages</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="language">
+					<strong>English</strong>
+				</div>
+				<div class="fluency">
+					Native speaker
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="interests" class="row">
+		<aside class="col-sm-3">
+			<h3>Interests</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Programming</h4>
+				</div>
+				<ul class="keywords">
+					<li>Development</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Video Games</h4>
+				</div>
+				<ul class="keywords">
+					<li>Destiny 2</li>
+					<li>Halo</li>
+					<li>COD</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Snowboarding</h4>
+				</div>
+				<ul class="keywords">
+					<li>Snowboarding</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Chillin</h4>
+				</div>
+				<ul class="keywords">
+					<li>Chillin</li>
+				</ul>
+			</div>
+			<div class="col-sm-6">
+				<div class="name">
+					<h4>Jokes</h4>
+				</div>
+				<ul class="keywords">
+					<li>I got &#x27;em</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+	
+
+	</div>
+	
+	</body>
+</html>
