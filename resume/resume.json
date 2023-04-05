@@ -6,7 +6,7 @@
     "image": "https://avatars.githubusercontent.com/u/9013245?v=4",
     "email": "williamswoodruff@gmail.com",
     "phone": "(314) 266-8207",
-    "url": "https://wswoodruff.github.io",
+    "url": "https://zillslab.com",
     "summary": "William Woodruff aka Bill or Zill, is a full stack JS and XR engineer with a JSNSD (JS Node Services Developer) cert from the Linux Foundation. Bill prefers using hapipal and hapi on the back-end, and react or react-native on the front-end, but has experience with a variety of tech stacks. Most recently for work projects Bill has been implementing an awesome XR UI at, ex: https://app.alakazam.io/yjnqZq5/vibes! He lead the implementation work on the lobby and in-room UI at Alakazam! Outside of work he's been having lots of fun working on his new chatbot, Chappy! Say hello at https://chappyai.com! Also checkout my personal ShaderFes over at https://zillslab.com!",
     "location": {
       "address": "28 Dusty Rhoades, Ln",
@@ -28,8 +28,13 @@
       },
       {
         "network": "Metaverse",
-        "username": "zill",
+        "username": "Zill",
         "url": "https://zillslab.com"
+      },
+      {
+        "network": "AI",
+        "username": "Chappy",
+        "url": "https://chappyai.com"
       }
     ]
   },
@@ -41,7 +46,6 @@
       "position": "Senior XR Engineer",
       "url": "https://alakazam.io",
       "startDate": "2022-01",
-      "endDate": "2023",
       "summary": "XR company Alakazam brings affordable self-service metaverse management services to subscription holders!",
       "highlights": [
         "Successfully lead the effort for implementing the main Lobby UI, and in-room UI. Checkout the slidy blue background when you hover it's fun! Ex: https://app.alakazam.io/yjnqZq5/vibes.",
@@ -78,9 +82,8 @@
       "location": "Portland, Maine",
       "description": "Full Stack web-app, react-native, and XR Development",
       "position": "Full Stack Developer",
-      "url": "https://bigroomstudios.com",
+      "url": "https://xdcreative.io",
       "startDate": "2014-10",
-      "endDate": "2023",
       "summary": "Full Stack web-app, react-native, and XR Development",
       "highlights": [
         "Enterprise-level web-app and react-native app development",
@@ -222,7 +225,7 @@
         "All back-end development",
         "All front-end development, except the googly eyes which were done by Trippy!"
       ],
-      "entity": "FUN Chatbot",
+      "entity": "XD Creative",
       "type": "application"
     }
   ],
