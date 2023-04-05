@@ -41,6 +41,7 @@
       "position": "Senior XR Engineer",
       "url": "https://alakazam.io",
       "startDate": "2022-01",
+      "endDate": "2023",
       "summary": "XR company Alakazam brings affordable self-service metaverse management services to subscription holders!",
       "highlights": [
         "Successfully lead the effort for implementing the main Lobby UI, and in-room UI. Checkout the slidy blue background when you hover it's fun! Ex: https://app.alakazam.io/yjnqZq5/vibes.",
@@ -79,10 +80,11 @@
       "position": "Full Stack Developer",
       "url": "https://bigroomstudios.com",
       "startDate": "2014-10",
+      "endDate": "2023",
       "summary": "Full Stack web-app, react-native, and XR Development",
       "highlights": [
         "Enterprise-level web-app and react-native app development",
-        "Fun projects like Chappy sometimes!"
+        "Fun projects like Chappy (https://chappyai.com) sometimes!"
       ]
     }
   ],
@@ -92,6 +94,7 @@
       "position": "Development Contributions",
       "url": "https://cywoc.org",
       "startDate": "2021-01-01",
+      "endDate": "2022-12",
       "summary": "Tech Education non-profit with focus to bring VR and top emerging tech to the women of color community via funded education, with community reachout achieved through engaging events!",
       "highlights": [
         "Part of 2022 Tribeca Film Festival's Juneteenth event https://tribecafilm.com/juneteenth",
@@ -131,14 +134,14 @@
       "name": "XR development",
       "level": "Lead",
       "keywords": [
-        "mozilla hubs"
+        "Mozilla hubs"
       ]
     },
     {
       "name": "Tech Art",
       "level": "Beginner",
       "keywords": [
-        "shaders"
+        "Shaders"
       ]
     },
     {
@@ -146,7 +149,7 @@
       "level": "Beginner",
       "keywords": [
         "AI",
-        "AI personality"
+        "AI personality building"
       ]
     }
   ],
@@ -160,7 +163,7 @@
     {
       "name": "Programming",
       "keywords": [
-        "Development"
+        "Creative Development"
       ]
     },
     {
