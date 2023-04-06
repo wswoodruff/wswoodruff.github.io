@@ -199,6 +199,7 @@
   "projects": [
     {
       "name": "Chappy",
+      "url": "https://chappyai.com",
       "description": "A FUN, friendly neighborhood chatbot!",
       "highlights": [
         "Built in a week but an hours-heavy one at that",
@@ -209,6 +210,7 @@
         "Eyes following the mouse built by TripDragon! Thanks Trippy!"
       ],
       "keywords": [
+        "AI",
         "ChatGPT",
         "Chatbot",
         "Javascript",
@@ -218,7 +220,6 @@
         "sse"
       ],
       "startDate": "2023-03-25",
-      "url": "https://chappyai.com",
       "roles": [
         "AI personality development",
         "API integration for openai, replicate",
@@ -226,6 +227,112 @@
         "All front-end development, except the googly eyes which were done by Trippy!"
       ],
       "entity": "XD Creative",
+      "type": "application"
+    },
+    {
+      "name": "Zill's Lab",
+      "url": "https://zillslab.com",
+      "description": "My own personal ShaderFes! More shaders to come later! This site also has a simple player controller with mouse and keyboard movement!",
+      "highlights": [],
+      "keywords": [
+        "THREE.js",
+        "react-three-fiber",
+        "ShaderFes"
+      ],
+      "startDate": "2022-03-25",
+      "roles": [
+        "All development"
+      ],
+      "entity": "XD Creative",
+      "type": "application"
+    },
+    {
+      "name": "Alakazam UI",
+      "url": "https://app.alakazam.io/38pn3yw/vibes",
+      "description": "A subscription-based, build-your-own metaverse full SaaS platform complete with awesome scenes and avatars built by the Alakazam team!! I worked on the front-end that you'll find in the associated project link. I worked on the lobby UI and in-room icons and submenus UI!",
+      "highlights": [
+        "Fun and responsive animated UI! Also check the slidy blue background that happens on hover after you enter a room and hover over an icon!"
+      ],
+      "keywords": [
+        "metaverse",
+        "THREE.js",
+        "mozilla hubs"
+      ],
+      "startDate": "2021-03",
+      "roles": [
+        "Contributed to and lead some of the UI dev implementation"
+      ],
+      "entity": "Alakazam",
+      "type": "application"
+    },
+    {
+      "name": "MyWorld",
+      "url": "https://myworldvirtual.com",
+      "description": "In MyWorld You Can... Meet, Stream and Video Chat in over 1,000 of our Private Virtual Spaces & Create your own 3D Environments to share with our global community Web 3D will change your world Choose your device and take a tour!",
+      "highlights": [],
+      "keywords": [
+        "metaverse",
+        "THREE.js",
+        "mozilla hubs"
+      ],
+      "startDate": "2021-03",
+      "roles": [
+        "Application features development including tweaks to the avatar system and front-end / back-end / CI/CD development"
+      ],
+      "entity": "Alakazam",
+      "type": "application"
+    },
+    {
+      "name": "Nearpeer",
+      "url": "https://nearpeer.net",
+      "description": "A social platform for college students during to feel more connected to a community, is great for orientation times!",
+      "highlights": [],
+      "keywords": [
+        "material design"
+      ],
+      "startDate": "2017-12",
+      "endDate": "2021-07",
+      "roles": [
+        "Application features development including tweaks to the avatar system and front-end / back-end / CI/CD development"
+      ],
+      "entity": "Big Room Studios",
+      "type": "application"
+    },
+    {
+      "name": "Jobs in the US",
+      "url": "https://jobsintheus.com",
+      "description": "A job board site built with material design for some extra pizzazz! Hosted on hapipal!! Has an intricate Search Engine and Applicant Tracking System!",
+      "highlights": [
+        "Integrated ATS system"
+      ],
+      "keywords": [
+        "material design"
+      ],
+      "startDate": "2018-07",
+      "endDate": "2020-12",
+      "roles": [
+        "Application features development including tweaks to the avatar system and front-end / back-end / CI/CD development"
+      ],
+      "entity": "Big Room Studios",
+      "type": "application"
+    },
+    {
+      "name": "Architalx",
+      "url": "https://architalx.org",
+      "description": "Talks dedicated to broadening the awareness and understanding of architecture, landscape architecture, and design.",
+      "highlights": [
+        "Talks from architects"
+      ],
+      "keywords": [
+        "architecture",
+        "talks"
+      ],
+      "startDate": "2018-02",
+      "endDate": "2018-04",
+      "roles": [
+        "Lead developer on the project, worked with a great designer, Justin Varbarakis on this one!"
+      ],
+      "entity": "Big Room Studios",
       "type": "application"
     }
   ],
