@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "(cd ./resume && resume export index.html --theme flat && cp ./public/index.html .)",
-    "serve": "(cd ./resume && resume serve --theme flat)"
+    "serve": "open ./resume/index.html"
   },
   "author": "wswoodruff",
   "license": "MINEs",
   "dependencies": {
-    "jsonresume-theme-flat": "^0.3.7"
+    "jsonresume-theme-elegant": "^1.16.1",
+    "jsonresume-theme-flat": "^0.3.7",
+    "jsonresume-theme-onepage": "^0.0.3"
   }
 }

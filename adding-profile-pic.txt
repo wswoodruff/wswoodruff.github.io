@@ -1,6 +1,6 @@
 #profile-pic {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   top: 20px;
   left: 20px;
   border-radius: 20px;
@@ -9,10 +9,20 @@
 
 Then update:
 
-<header class="masthead">
-    <div id="profile-pic">
-    <img src="https://github.com/wswoodruff/wswoodruff.github.io/blob/1f3469af7148f9f865d3a5efbaeeeb546ae0c3dd/assets/profile-pic.png?raw=true" />
-    </div>
-    <h1>William Woodruff</h1>
-    <h2>Full Stack JS and XR Engineer</h2>
+<header id="header">
+		<div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-sm-push-3">
+                <div id="profile-pic">
+                    <img src="https://github.com/wswoodruff/wswoodruff.github.io/blob/1f3469af7148f9f865d3a5efbaeeeb546ae0c3dd/assets/profile-pic.png?raw=true" />
+                </div>
+                <h1>
+                    William Woodruff
+                </h1>
+                <h2>
+                    Senior Full Stack JS Engineer (cv v2.01)
+                </h2>
+            </div>
+        </div>
+		</div>
 </header>
